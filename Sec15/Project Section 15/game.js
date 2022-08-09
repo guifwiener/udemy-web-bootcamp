@@ -44,9 +44,19 @@ function checkAnswer(currentLevel) {
       }, 1000);
     }
   } else {
-    $("#level-title").text(`Wrong answer! Score: ${level - 1}`);
-    console.log("wrong");
+    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("body").addClass("game-over");
+    setTimeout(() => {
+      $("body").removeClass("game-over");
+    }, 100);
+    startOver();
   }
+}
+
+function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false;
 }
 
 function playSound(name) {

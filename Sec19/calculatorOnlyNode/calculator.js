@@ -24,16 +24,24 @@ const server = http
                 res.write(`The sum of the numbers is ${sum}`);
                 res.end();
             });
-
-
-
-
-            
-            // var num1 = parseInt(req.body.num1);
-            // var num2 = parseInt(req.body.num2);
-            // var sum = num1 + num2;
-            // res.send(`The sum of the numbers is ${sum}`);
-        } 
+        } else if(req.url === '/bmicalculator' && req.method === 'GET') {
+            res.writeHead(200, {"Content-Type": "text/html"});
+            fs.createReadStream('./bmiCalculator.html').pipe(res);
+        } else if(req.url === '/bmicalculator' && req.method === 'POST') {
+            res.writeHead(200, {"Content-Type": "text/html"});
+            let body = '';
+            req.on('data', chunk => {
+                body += chunk.toString();
+            });
+            req.on('end', () => {
+                let parsedInfo = parse(body);
+                var height = parseFloat(parsedInfo.height);
+                var weight = parseFloat(parsedInfo.weight);
+                var bmi = weight / (height*height);
+                res.write(`Your BMI is ${bmi}`);
+                res.end();
+            })
+        }
         
         
         else {

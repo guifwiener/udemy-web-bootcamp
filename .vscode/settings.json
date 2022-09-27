@@ -1,0 +1,31 @@
+{
+  "workbench.colorTheme": "Origamid Next",
+  "workbench.iconTheme": "origamid-next-icons",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.75,
+  "editor.tabSize": 3,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.wordWrap": "on",
+  "editor.minimap.renderCharacters": false,
+  "telemetry.enableCrashReporter": false,
+  "breadcrumbs.filePath": "off",
+  "outline.icons": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.formatOnSave": true,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 0,
+  "html.autoClosingTags": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "salesforcedx-vscode-apex.java.home": "C:\\Program Files\\Java\\jdk-11.0.14",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "files.autoSave": "afterDelay",
+  "redhat.telemetry.enabled": false,
+  "php.debug.executablePath": "C:/Php/php.exe",
+  "php.validate.executablePath": "C:/Php/php.exe",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "prettier.printWidth": 150
+}
